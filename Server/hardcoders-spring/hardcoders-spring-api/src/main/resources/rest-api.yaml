@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: HardCoders API
+  version: '1.0'
+  x-logo:
+    url: ''
+  description: This is the main API for the HardCoders project
+paths:
+  /api/v1/teams:
+    summary: Returns the number of teams available
+    description: ''
+    get:
+      tags:
+        - teams
+      responses:
+        200:
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
+    x-last-modified: 1614194438071
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      name: BASIC
+      in: header
+      description: |-
+        Example:
+        > Authorization: Basic ZGVtbzpwQDU1dzByZA ==
+      x-last-modified: 1614194348082
+  schemas:
+    Team:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+      required:
+        - id
+        - name
+tags:
+  - name: teams
+servers:
+  - url: 'http://localhost:8080'
+    description: Development Environment
+    variables: {}
+    x-last-modified: 1614194374234
+security:
+  - BasicAuth: []
