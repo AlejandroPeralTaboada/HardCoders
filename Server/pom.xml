@@ -36,6 +36,7 @@
 
     <modules>
         <module>hardcoders-domain</module>
+        <module>hardcoders-spring</module>
     </modules>
 
 
