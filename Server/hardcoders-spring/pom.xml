@@ -12,6 +12,7 @@
     <properties>
         <springfox.version>2.9.2</springfox.version>
         <jackson-databind.version>0.2.1</jackson-databind.version>
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
     </properties>
     <artifactId>hardcoders-spring</artifactId>
 
@@ -40,6 +41,12 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox-boot-starter.version}</version>
+            </dependency>
+
             <!-- Json Serialization -->
             <dependency>
                 <groupId>org.openapitools</groupId>
@@ -55,6 +62,7 @@
 
         </dependencies>
     </dependencyManagement>
+
 
 
     <modules>
